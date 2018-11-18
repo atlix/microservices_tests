@@ -3,12 +3,12 @@
 
 ## Microservices repository. Otus DevOps.
 
-<a name="hw1"></a>
-## Homework 1 / Docker-1 / 
-<a name="hw11"></a>
+<a name="hw12"></a>
+## Homework 12 / Docker-1 / 
+<a name="hw121"></a>
 ##### Main task
 - Установлен Docker
 - Выполнены базовые манипуляции с тестовыми образами
-<a name="hw12"></a>
+<a name="hw122"></a>
 ##### Additional task *
 - docker-1.log внесено краткое описание отличий контейнера от образа
