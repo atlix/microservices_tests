@@ -1,0 +1,21 @@
+---
+- name: Run reddit container
+  hosts: all
+  become: true
+  tasks:
+
+    - name: Pull image
+      docker_image:
+        name: vstaf/otus-reddit
+        tag: 1.0
+        state: present
+
+    - name: Run app container
+      docker_container:
+        name: reddit
+        image: vstaf/otus-reddit:1.0
+        detach: yes
+        network_mode: host
+        ports:
+          - "9292:9292"
+        state: started

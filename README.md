@@ -12,3 +12,24 @@
 <a name="hw122"></a>
 ##### Additional task *
 - docker-1.log внесено краткое описание отличий контейнера от образа
+
+<a name="hw13"></a>
+## Homework 12 / Docker-2 / 
+<a name="hw131"></a>
+##### Main task
+- Создана VM с docker в GCP с использованием docker-machine
+- Выполнены базовые взаимодействия с удаленным docker engine
+- Разница вывода с --pid host заключается в наличии процессов хостовой машины, так как подключается pid namespace основного хоста
+- Написан Dockerfile, устанавливающий приложение reddit в контейнер, загрузили его в docker hub
+<a name="hw132"></a>
+##### Additional task *
+- Добавлена конфигурация для создания инстанса через terraform, куда с помощью ansible устанавливается docker и приложение; так же добавлен шаблон packer для создания образа с docker внутри.
+```
+#creating bucket and instance
+cd docker-monolith/infra/terraform/ && terraform init && terraform apply
+cd stage && terraform init && terraform apply
+#installing docker and app
+cd ../../ansible && ansible-playbook ./playbooks/main.yml
+#backing image
+cd ../packer && packer build -var-file=./variables.json docker.json
+```
