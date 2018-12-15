@@ -67,3 +67,14 @@ cd ../packer && packer build -var-file=./variables.json docker.json
 ##### Additional task *
 - Создан dockerfile для образа, включащего в себя возможность автоматического разворачивания и регистрации gitlab runner
 - Добавлен incoming webhook для уведомления из gitlab в персональный канал devops otus slack
+
+<a name="hw17"></a>
+## Homework 17 / Gitlab CI 2 / 
+<a name="hw171"></a>
+##### Main task
+- Пайплайн расширен dev,stage,prod окружениями
+- Настроено динамическое окружение для ревью бранчей (кроме мастера)
+
+<a name="hw172"></a>
+##### Additional task *
+- 
