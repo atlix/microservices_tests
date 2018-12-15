@@ -33,3 +33,13 @@ cd ../../ansible && ansible-playbook ./playbooks/main.yml
 #backing image
 cd ../packer && packer build -var-file=./variables.json docker.json
 ```
+
+<a name="hw14"></a>
+## Homework 14 / Docker-3 / 
+<a name="hw141"></a>
+##### Main task
+- Созданы docker-образы микросервисов приложения Reddit
+- Внесены небольшие правки в dockerfile comment и post сервисов в рамках best practiсes.
+<a name="hw142"></a>
+##### Additional task *
+- Проведена оптимизация сборки docker-образа UI
