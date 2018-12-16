@@ -58,8 +58,8 @@ branch review:
       --google-machine-type n1-standard-1 
       --google-disk-size "10" 
       --google-tags docker-host 
-      --google-zone "${GCP_ZONE}" "$CI_COMMIT_REF_SLUG.$CI_PIPELINE_ID"
-    - eval $(~/docker-machine env --shell sh $CI_COMMIT_REF_SLUG.$CI_PIPELINE_ID)
+      --google-zone "${GCP_ZONE}" "${CI_COMMIT_REF_NAME}-${CI_PIPELINE_ID}"
+    - eval $(~/docker-machine env --shell sh $${CI_COMMIT_REF_NAME}-${CI_PIPELINE_ID})
     - docker run -d -p 9292:9292 --name reddit $REPO:$CI_COMMIT_REF_SLUG.$CI_PIPELINE_ID
   environment:
     name: branch/$CI_COMMIT_REF_NAME
@@ -75,7 +75,7 @@ stop_review:
   script:
     - echo $GCE_JSON > key.json && export GOOGLE_APPLICATION_CREDENTIALS=key.json
     - gcloud auth activate-service-account --key-file=key.json --project=${GCP_PROJECT}
-    - gcloud compute instances delete "$CI_COMMIT_REF_SLUG.$CI_PIPELINE_ID" --zone=${GCP_ZONE} --quiet
+    - gcloud compute instances delete "${CI_COMMIT_REF_NAME}-${CI_PIPELINE_ID}" --zone=${GCP_ZONE} --quiet
   when: manual
   environment:
     name: branch/$CI_COMMIT_REF_NAME
