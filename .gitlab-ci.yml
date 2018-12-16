@@ -52,14 +52,14 @@ branch review:
     - apk update
     - apk add openssl curl
     - echo $GCE_JSON > key.json && export GOOGLE_APPLICATION_CREDENTIALS=key.json
-    - curl -L https://github.com/docker/machine/releases/download/v0.16.0/docker-machine-`uname -s`-`uname -m` >/tmp/docker-machine && chmod +x /tmp/docker-machine && sudo cp /tmp/docker-machine /usr/local/bin/docker-machine
-    - docker-machine create --driver google --google-project "${GCP_PROJECT}"
+    - curl -L https://github.com/docker/machine/releases/download/v0.16.0/docker-machine-`uname -s`-`uname -m` >/tmp/docker-machine && chmod +x /tmp/docker-machine && cp /tmp/docker-machine ~/docker-machine
+    - ~/docker-machine create --driver google --google-project "${GCP_PROJECT}"
       --google-machine-image https://www.googleapis.com/compute/v1/projects/ubuntu-os-cloud/global/images/family/ubuntu-1604-lts 
       --google-machine-type n1-standard-1 
       --google-disk-size "10" 
       --google-tags docker-host 
       --google-zone "${GCP_ZONE}" "$CI_COMMIT_REF_SLUG.$CI_PIPELINE_ID"
-    - eval $(docker-machine env --shell sh $CI_COMMIT_REF_SLUG.$CI_PIPELINE_ID)
+    - eval $(~/docker-machine env --shell sh $CI_COMMIT_REF_SLUG.$CI_PIPELINE_ID)
     - docker run -d -p 9292:9292 --name reddit $REPO:$CI_COMMIT_REF_SLUG.$CI_PIPELINE_ID
   environment:
     name: branch/$CI_COMMIT_REF_NAME
