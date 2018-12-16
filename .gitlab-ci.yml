@@ -59,7 +59,7 @@ branch review:
       --google-disk-size "10" 
       --google-tags docker-host 
       --google-zone "${GCP_ZONE}" "${CI_COMMIT_REF_NAME}-${CI_PIPELINE_ID}"
-    - eval $(~/docker-machine env --shell sh $${CI_COMMIT_REF_NAME}-${CI_PIPELINE_ID})
+    - eval $(~/docker-machine env --shell sh ${CI_COMMIT_REF_NAME}-${CI_PIPELINE_ID})
     - docker run -d -p 9292:9292 --name reddit $REPO:$CI_COMMIT_REF_SLUG.$CI_PIPELINE_ID
   environment:
     name: branch/$CI_COMMIT_REF_NAME
