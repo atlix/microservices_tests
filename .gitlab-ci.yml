@@ -19,7 +19,7 @@ build_job:
     - echo 'Building'
     - echo "${DOCKER_PASSWORD}" | docker login --username "${DOCKER_USERNAME}" --password-stdin
     - docker build -t $REPO:$CI_COMMIT_REF_SLUG.$CI_PIPELINE_ID docker-monolith
-    - docker push
+    - docker push $REPO:$CI_COMMIT_REF_SLUG.$CI_PIPELINE_ID
 
 test_unit_job:
   stage: test
