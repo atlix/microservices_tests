@@ -22,6 +22,9 @@ build_job:
     - docker push $REPO:$CI_COMMIT_REF_SLUG.$CI_PIPELINE_ID
 
 test_unit_job:
+  before_script:
+  - cd reddit
+  - bundle install
   stage: test
   services:
     - mongo:latest
