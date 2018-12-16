@@ -75,6 +75,7 @@ stop_review:
   script:
     - echo $GCE_JSON > key.json && export GOOGLE_APPLICATION_CREDENTIALS=key.json
     - gcloud auth activate-service-account --key-file=key.json --project=${GCP_PROJECT}
+    - gcloud compute instances list
     - gcloud compute instances delete "${CI_COMMIT_REF_NAME}-${CI_PIPELINE_ID}" --zone=${GCP_ZONE} --quiet
   when: manual
   environment:
