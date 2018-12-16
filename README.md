@@ -43,3 +43,15 @@ cd ../packer && packer build -var-file=./variables.json docker.json
 <a name="hw142"></a>
 ##### Additional task *
 - Проведена оптимизация сборки docker-образа UI
+
+<a name="hw15"></a>
+## Homework 15 / Docker-4 / 
+<a name="hw151"></a>
+##### Main task
+- Изучены принципы работы сетевых драйверов none, host, bridge
+- Проведены эксперименты с работой контейнеров приложения в разных сетях
+- Создан docker-compose файл, выполнена его параметризация
+
+<a name="hw152"></a>
+##### Additional task *
+- Создан файл docker-compose.override.yml для работы с кодом приложения без необходимости пересборки образа
