@@ -55,3 +55,15 @@ cd ../packer && packer build -var-file=./variables.json docker.json
 <a name="hw152"></a>
 ##### Additional task *
 - Создан файл docker-compose.override.yml для работы с кодом приложения без необходимости пересборки образа
+
+<a name="hw16"></a>
+## Homework 16 / Gitlab CI / 
+<a name="hw161"></a>
+##### Main task
+- Установлены и настроены Gitlab, gitlab runner
+- Создан базовый пайплайн, добавлены тесты
+
+<a name="hw162"></a>
+##### Additional task *
+- Создан dockerfile для образа, включащего в себя возможность автоматического разворачивания и регистрации gitlab runner
+- Добавлен incoming webhook для уведомления из gitlab в персональный канал devops otus slack
