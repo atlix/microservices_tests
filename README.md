@@ -77,4 +77,17 @@ cd ../packer && packer build -var-file=./variables.json docker.json
 
 <a name="hw172"></a>
 ##### Additional task *
-- 
+- Добавлена сборка образа приложения и деплой его в отдельное окружение на GCP VM + удаление VM кнопкой
+
+<a name="hw18"></a>
+## Homework 18 / Monitoring 1 / 
+<a name="hw181"></a>
+##### Main task
+- Установлен Prometheus
+- Собраны образы компонентов приложения reddit, node-exporter, prometheus
+- Протестирован мониторинг состояния приложения, виртуальной машины
+
+<a name="hw182"></a>
+##### Additional task *
+- Собран образ mongodb-exporter, добавлен мониторинг MongoDB
+
