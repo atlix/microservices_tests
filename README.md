@@ -91,3 +91,15 @@ cd ../packer && packer build -var-file=./variables.json docker.json
 ##### Additional task *
 - Собран образ mongodb-exporter, добавлен мониторинг MongoDB
 
+<a name="hw19"></a>
+## Homework 19 / Monitoring 2 / 
+<a name="hw191"></a>
+##### Main task
+- В стек мониторинга добавлены Grafana и Alertmanager
+- Изучены базовые возможности создания графиков в Grafana, созданы тестовые дашборды с ментриками приложения
+- Добавлен алертинг в персональный slack-канал
+- https://hub.docker.com/u/vstaf
+
+<a name="hw182"></a>
+##### Additional task *
+- 
