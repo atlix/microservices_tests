@@ -100,6 +100,18 @@ cd ../packer && packer build -var-file=./variables.json docker.json
 - Добавлен алертинг в персональный slack-канал
 - https://hub.docker.com/u/vstaf
 
-<a name="hw182"></a>
+<a name="hw192"></a>
+##### Additional task *
+- 
+
+<a name="hw20"></a>
+## Homework 20 / Logging 1 / 
+<a name="hw201"></a>
+##### Main task
+- Запустили EFK-стек для централизованного сбора логов приложений
+- Протестировали парсинг логов с помощью регулярок и grok-паттернов
+- Изучили базовые возможности трассировки приложения с помощью zipkin
+
+<a name="hw202"></a>
 ##### Additional task *
 - 

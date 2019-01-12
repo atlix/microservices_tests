@@ -8,6 +8,11 @@ LABEL \
 WORKDIR /app
 COPY . /app
 
+RUN set -x \
+    && apk update \
+    && apk add --no-cache gcc musl-dev \
+    && rm -rf /usr/lib/ruby/gems/*/cache/* /var/cache/apk/* /tmp/* /var/tmp/*
+
 RUN pip install --no-cache-dir -r /app/requirements.txt
 
 ENV POST_DATABASE_HOST post_db
