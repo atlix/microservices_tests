@@ -115,3 +115,14 @@ cd ../packer && packer build -var-file=./variables.json docker.json
 <a name="hw202"></a>
 ##### Additional task *
 - 
+
+<a name="hw21"></a>
+## Homework 20 / Kubernetes 1 / 
+<a name="hw211"></a>
+##### Main task
+- Созданы манифесты для сервисов ui, post, comment и mongo
+- Пройден kubernetes the hard way tutorial
+
+<a name="hw212"></a>
+##### Additional task *
+- 
