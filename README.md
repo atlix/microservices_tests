@@ -117,7 +117,7 @@ cd ../packer && packer build -var-file=./variables.json docker.json
 - 
 
 <a name="hw21"></a>
-## Homework 20 / Kubernetes 1 / 
+## Homework 21 / Kubernetes 1 / 
 <a name="hw211"></a>
 ##### Main task
 - Созданы манифесты для сервисов ui, post, comment и mongo
@@ -128,7 +128,7 @@ cd ../packer && packer build -var-file=./variables.json docker.json
 - 
 
 <a name="hw22"></a>
-## Homework 20 / Kubernetes 1 / 
+## Homework 22 / Kubernetes 2 / 
 <a name="hw221"></a>
 ##### Main task
 - Модифицированы файлы манифестов (post, ui, comment, mongo), добавлены манифесты сервисов и создания неймспейса
@@ -137,3 +137,14 @@ cd ../packer && packer build -var-file=./variables.json docker.json
 <a name="hw222"></a>
 ##### Additional task *
 - 
+
+<a name="hw23"></a>
+## Homework 23 / Kubernetes 3 / 
+<a name="hw231"></a>
+##### Main task
+- Cозданы/модифицированы файлы манифестов Service (NodePort, LB), ingress, mongo-deployment, cетевых политик, дисковых хранилищ
+- Протестировано на практике в рамках приложения reddit
+
+<a name="hw232"></a>
+##### Additional task *
+- Добавлен манифест для создания Secret. 
