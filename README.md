@@ -148,3 +148,15 @@ cd ../packer && packer build -var-file=./variables.json docker.json
 <a name="hw232"></a>
 ##### Additional task *
 - Добавлен манифест для создания Secret. 
+
+<a name="hw24"></a>
+## Homework 24 / Kubernetes 4 / 
+<a name="hw241"></a>
+##### Main task
+- Установлен helm + tiller
+- Созданы Helm-чарты для установки компонентов приложения и приложения целиком
+- Развернут Gitlab CI, настроены пайплайны для сборки и деплоя приложения
+
+<a name="hw242"></a>
+##### Additional task *
+-
