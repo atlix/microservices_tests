@@ -160,3 +160,16 @@ cd ../packer && packer build -var-file=./variables.json docker.json
 <a name="hw242"></a>
 ##### Additional task *
 -
+
+<a name="hw25"></a>
+## Homework 25 / Kubernetes 5 / 
+<a name="hw251"></a>
+##### Main task
+- Установлен prometheus + grafana
+- Настроен сбор метрик Kubernetes и компонентов приложения
+- Шаблонизированы дашборды графиков приложения для просмотра информации по разным неймспейсам
+- Установлен EFK-кластер для сбора логов k8s + приложения
+
+<a name="hw252"></a>
+##### Additional task *
+- Создан helm-чарт для установки EFK
